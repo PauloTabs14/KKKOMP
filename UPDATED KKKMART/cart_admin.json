@@ -1,0 +1,18 @@
+[
+    {
+        "image": "sneakers.png",
+        "name": "Shoes",
+        "price": "600",
+        "stocks": "9",
+        "rating": "4.5",
+        "description": "Nice shoes",
+        "sizes": [
+            "40",
+            "41",
+            "42",
+            "43",
+            "44"
+        ],
+        "size": "40"
+    }
+]
