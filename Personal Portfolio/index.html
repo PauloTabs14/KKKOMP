@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Carter | Full Stack Developer Portfolio</title>
+<meta name="description" content="Personal portfolio of Alex Carter, a Full Stack Developer specializing in modern web applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loader" id="loader">
+  <div class="loader-circle"></div>
+  <p class="loader-text">Loading Experience...</p>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">Alex<span>.dev</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#timeline" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+      <a href="login.html" class="btn btn-small btn-outline" id="authBtn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="home">
+  <div class="hero-bg">
+    <div class="gradient-orb orb1"></div>
+    <div class="gradient-orb orb2"></div>
+    <div class="gradient-orb orb3"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-image fade-in">
+      <div class="hero-img-wrapper">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex&backgroundColor=transparent" alt="Alex Carter profile picture">
+        <div class="status-dot"></div>
+      </div>
+    </div>
+    <h1 class="hero-name fade-in">Hi, I'm <span class="gradient-text">Alex Carter</span></h1>
+    <h2 class="hero-title fade-in">
+      <span id="typed-text"></span><span class="cursor">|</span>
+    </h2>
+    <p class="hero-desc fade-in">
+      I craft elegant, high-performance web experiences with clean code and
+      thoughtful design — turning complex problems into simple, beautiful interfaces.
+    </p>
+    <div class="hero-buttons fade-in">
+      <a href="#projects" class="btn btn-primary">
+        <i class="fa-solid fa-diagram-project"></i> View Projects
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        <i class="fa-solid fa-paper-plane"></i> Contact Me
+      </a>
+    </div>
+    <div class="hero-socials fade-in">
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="mailto:alex@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</header>
+
+<!-- About Section -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Get To Know Me</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a passionate Full Stack Developer with a love for building products that
+          merge beautiful design with rock-solid engineering. With several years of
+          experience across the stack, I enjoy turning ambitious ideas into polished,
+          production-ready applications.
+        </p>
+        <p>
+          My approach blends performance, accessibility, and aesthetics — because
+          great software should feel as good as it looks. When I'm not coding, I'm
+          exploring new frameworks, contributing to open source, or mentoring
+          aspiring developers.
+        </p>
+        <div class="about-counters">
+          <div class="counter-item">
+            <h3 class="counter" data-target="4">0</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="counter-item">
+            <h3 class="counter" data-target="48">0</h3>
+            <p>Projects Done</p>
+          </div>
+          <div class="counter-item">
+            <h3 class="counter" data-target="30">0</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="counter-item">
+            <h3 class="counter" data-target="12">0</h3>
+            <p>Awards Won</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-cards reveal">
+        <div class="glass-card info-card">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Education</h3>
+          <p><strong>B.Sc. Computer Science</strong><br>University of Technology, 2018 - 2022</p>
+          <p><strong>Full Stack Web Development</strong><br>Online Bootcamp Certification, 2022</p>
+        </div>
+        <div class="glass-card info-card">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Career Goals</h3>
+          <p>To lead high-impact engineering teams building accessible, scalable
+          products — while continuously growing as a designer-developer hybrid who
+          bridges UX and engineering.</p>
+        </div>
+        <div class="glass-card info-card">
+          <i class="fa-solid fa-layer-group"></i>
+          <h3>Skills Summary</h3>
+          <p>Proficient in modern JavaScript frameworks, RESTful APIs, databases,
+          and cloud deployment — with a strong eye for UI/UX and responsive
+          design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+    </div>
+
+    <div class="skills-filter reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="tools">Tools</button>
+    </div>
+
+    <div class="progress-section reveal">
+      <div class="progress-item" data-category="frontend">
+        <div class="progress-label"><span>HTML / CSS</span><span>95%</span></div>
+        <div class="progress-bar"><div class="progress-fill" data-width="95"></div></div>
+      </div>
+      <div class="progress-item" data-category="frontend">
+        <div class="progress-label"><span>JavaScript</span><span>90%</span></div>
+        <div class="progress-bar"><div class="progress-fill" data-width="90"></div></div>
+      </div>
+      <div class="progress-item" data-category="frontend">
+        <div class="progress-label"><span>React</span><span>85%</span></div>
+        <div class="progress-bar"><div class="progress-fill" data-width="85"></div></div>
+      </div>
+      <div class="progress-item" data-category="backend">
+        <div class="progress-label"><span>Node.js</span><span>88%</span></div>
+        <div class="progress-bar"><div class="progress-fill" data-width="88"></div></div>
+      </div>
+      <div class="progress-item" data-category="backend">
+        <div class="progress-label"><span>MongoDB / SQL</span><span>80%</span></div>
+        <div class="progress-bar"><div class="progress-fill" data-width="80"></div></div>
+      </div>
+      <div class="progress-item" data-category="tools">
+        <div class="progress-label"><span>Git / GitHub</span><span>92%</span></div>
+        <div class="progress-bar"><div class="progress-fill" data-width="92"></div></div>
+      </div>
+    </div>
+
+    <div class="tech-grid reveal">
+      <div class="tech-card" data-category="frontend"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+      <div class="tech-card" data-category="frontend"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="tech-card" data-category="frontend"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-card" data-category="frontend"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-card" data-category="backend"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-card" data-category="backend"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
+      <div class="tech-card" data-category="backend"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-card" data-category="tools"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-card" data-category="tools"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+      <div class="tech-card" data-category="tools"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-card" data-category="tools"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+      <div class="tech-card" data-category="backend"><i class="fa-brands fa-python"></i><span>Python</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">My Work</span>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+    </div>
+
+    <div class="projects-controls reveal">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="projectSearch" placeholder="Search projects...">
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-pfilter="all">All</button>
+        <button class="filter-btn" data-pfilter="web">Web App</button>
+        <button class="filter-btn" data-pfilter="ui">UI/UX</button>
+        <button class="filter-btn" data-pfilter="api">API</button>
+      </div>
+    </div>
+
+    <div class="projects-grid reveal" id="projectsGrid">
+
+      <div class="project-card" data-category="web" data-title="ecommerce platform shopwave">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="ShopWave e-commerce platform screenshot" loading="lazy">
+          <div class="project-overlay">
+            <a href="#" class="icon-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="icon-btn" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>ShopWave E-Commerce</h3>
+          <p>A full-featured online store with cart, checkout, and admin dashboard built for performance and scale.</p>
+          <div class="tech-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="btn btn-small btn-primary"><i class="fa-solid fa-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ui" data-title="finance dashboard ui design">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Finance dashboard UI design screenshot" loading="lazy">
+          <div class="project-overlay">
+            <a href="#" class="icon-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="icon-btn" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Finance Dashboard UI</h3>
+          <p>A sleek analytics dashboard concept with data visualizations, dark mode, and micro-interactions.</p>
+          <div class="tech-tags">
+            <span>Figma</span><span>CSS3</span><span>Chart.js</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="btn btn-small btn-primary"><i class="fa-solid fa-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="api" data-title="task management rest api">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="Task management API server screenshot" loading="lazy">
+          <div class="project-overlay">
+            <a href="#" class="icon-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="icon-btn" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>TaskFlow REST API</h3>
+          <p>A secure, scalable RESTful API for task management with JWT auth, rate limiting, and docs.</p>
+          <div class="tech-tags">
+            <span>Express</span><span>JWT</span><span>PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="btn btn-small btn-primary"><i class="fa-solid fa-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="web" data-title="social media app connectsphere">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop" alt="ConnectSphere social media app screenshot" loading="lazy">
+          <div class="project-overlay">
+            <a href="#" class="icon-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="icon-btn" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>ConnectSphere</h3>
+          <p>A real-time social platform with chat, notifications, and media sharing built on a modern stack.</p>
+          <div class="tech-tags">
+            <span>React</span><span>Socket.io</span><span>Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="btn btn-small btn-primary"><i class="fa-solid fa-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ui" data-title="travel app mobile redesign">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" alt="Travel app mobile redesign screenshot" loading="lazy">
+          <div class="project-overlay">
+            <a href="#" class="icon-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="icon-btn" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Wanderly Mobile Redesign</h3>
+          <p>A complete UI/UX overhaul of a travel booking app focused on simplicity and delight.</p>
+          <div class="tech-tags">
+            <span>Figma</span><span>Prototyping</span><span>UX Research</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="btn btn-small btn-primary"><i class="fa-solid fa-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="api" data-title="weather forecast api gateway">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop" alt="Weather forecast API gateway screenshot" loading="lazy">
+          <div class="project-overlay">
+            <a href="#" class="icon-btn" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="icon-btn" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>SkyCast Weather API</h3>
+          <p>An aggregator API gateway combining multiple weather data sources with caching for speed.</p>
+          <div class="tech-tags">
+            <span>Node.js</span><span>Redis</span><span>Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="btn btn-small btn-primary"><i class="fa-solid fa-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="no-results" id="noResults" hidden>No projects match your search.</p>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section timeline-section" id="timeline">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <span class="timeline-date">2024 - Present</span>
+          <h3>Senior Frontend Developer</h3>
+          <p class="timeline-org">Nova Digital Studio</p>
+          <p>Leading a team building component-driven design systems and high-performance web apps for enterprise clients.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <span class="timeline-date">2022 - 2024</span>
+          <h3>Full Stack Developer</h3>
+          <p class="timeline-org">BrightWave Tech</p>
+          <p>Developed and maintained full-stack applications using React, Node.js, and MongoDB for SaaS products.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <span class="timeline-date">2022</span>
+          <h3>Full Stack Web Development Certificate</h3>
+          <p class="timeline-org">Online Bootcamp</p>
+          <p>Completed an intensive program covering modern JavaScript, React, databases, and deployment practices.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass-card">
+          <span class="timeline-date">2018 - 2022</span>
+          <h3>B.Sc. Computer Science</h3>
+          <p class="timeline-org">University of Technology</p>
+          <p>Graduated with honors, focusing on software engineering, algorithms, and human-computer interaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Let's build something great together.</h3>
+        <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>alex@example.com</span></div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+1 (555) 123-4567</span></div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>San Francisco, CA</span></div>
+        <div class="hero-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <span class="error-msg" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="error-msg" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          <span class="error-msg" id="subjectError"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          <span class="error-msg" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-content">
+    <a href="#home" class="logo">Alex<span>.dev</span></a>
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; <span id="year"></span> Alex Carter. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

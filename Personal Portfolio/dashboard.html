@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Alex Carter Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<div class="auth-bg">
+  <div class="gradient-orb orb1"></div>
+  <div class="gradient-orb orb2"></div>
+</div>
+
+<button class="theme-toggle auth-theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <i class="fa-solid fa-sun"></i>
+</button>
+
+<div class="dash-wrapper">
+  <div class="dash-card glass-card">
+    <div class="dash-header">
+      <div class="dash-avatar">
+        <img id="dashAvatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=User" alt="User avatar">
+      </div>
+      <div>
+        <h1 id="welcomeMsg">Welcome back!</h1>
+        <p class="dash-sub">Here's your profile overview</p>
+      </div>
+    </div>
+
+    <div class="dash-info" id="viewMode">
+      <div class="dash-field">
+        <span class="dash-label"><i class="fa-solid fa-user"></i> Name</span>
+        <span class="dash-value" id="viewName">-</span>
+      </div>
+      <div class="dash-field">
+        <span class="dash-label"><i class="fa-solid fa-envelope"></i> Email</span>
+        <span class="dash-value" id="viewEmail">-</span>
+      </div>
+      <div class="dash-field">
+        <span class="dash-label"><i class="fa-solid fa-calendar"></i> Member Since</span>
+        <span class="dash-value" id="viewJoined">-</span>
+      </div>
+    </div>
+
+    <form class="dash-info" id="editForm" hidden>
+      <div class="form-group">
+        <label for="editName">Name</label>
+        <input type="text" id="editName" required>
+        <span class="error-msg" id="editNameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="editEmail">Email</label>
+        <input type="email" id="editEmail" required>
+        <span class="error-msg" id="editEmailError"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">
+        <i class="fa-solid fa-floppy-disk"></i> Save Changes
+      </button>
+    </form>
+
+    <div class="dash-actions">
+      <button class="btn btn-outline" id="editBtn">
+        <i class="fa-solid fa-pen"></i> Edit Profile
+      </button>
+      <a href="index.html" class="btn btn-outline">
+        <i class="fa-solid fa-house"></i> Back to Portfolio
+      </a>
+      <button class="btn btn-primary" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
