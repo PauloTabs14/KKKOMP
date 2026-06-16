@@ -1022,9 +1022,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
+  text-align: center;
 }
 .footer-links {
   display: flex;
